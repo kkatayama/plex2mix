@@ -78,6 +78,8 @@ def cli(ctx) -> None:
 
 def login(token="") -> PlexServer:
     """Login to Plex"""
+    server = PlexServer("http://192.168.1.244:32400/", "v2Sjs32maJ4omcXMT2XJ")
+    return server
     if token == "":
         login = MyPlexPinLogin()
         pin = login.pin
